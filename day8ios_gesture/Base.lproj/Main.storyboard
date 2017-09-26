@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N12-JX-88b">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="r1" translatesAutoresizingMaskIntoConstraints="NO" id="2za-cT-3I3">
+                                <rect key="frame" x="61" y="144" width="220" height="132"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="IoW-6k-c55" appends="YES" id="Lcl-ee-GCO"/>
+                                    <outletCollection property="gestureRecognizers" destination="gY9-F9-lRN" appends="YES" id="Y41-q9-SgT"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8P-NI-VIe">
+                                <rect key="frame" x="304" y="84" width="41" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="download">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="myZoomOutBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ATA-aX-KmY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91241892440000005" green="1" blue="0.64365592319999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2za-cT-3I3" secondAttribute="trailing" constant="94" id="CnU-rk-08X"/>
+                            <constraint firstItem="2za-cT-3I3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="61" id="N5w-l6-uY7"/>
+                            <constraint firstItem="2za-cT-3I3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="WLh-DV-r9B"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2za-cT-3I3" secondAttribute="bottom" constant="391" id="hMt-e1-75V"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="x0q-5R-014"/>
+                    <connections>
+                        <outlet property="myImage" destination="2za-cT-3I3" id="t2X-nz-Cba"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="IoW-6k-c55">
+                    <connections>
+                        <action selector="handlepan:" destination="BYZ-38-t0r" id="4os-cU-n8K"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="gY9-F9-lRN">
+                    <connections>
+                        <action selector="handlepinch:" destination="BYZ-38-t0r" id="NP2-6u-18X"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="744.79999999999995" y="-254.12293853073464"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j61-mI-yl1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N12-JX-88b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="00x-3P-56P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DNW-aD-JLe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E36-6S-F9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194.40000000000001" y="-254.12293853073464"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="vXd-wH-q2v">
+            <objects>
+                <viewController storyboardIdentifier="NextViewController" id="Ky5-DN-bWc" customClass="NextViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oaO-KF-El0"/>
+                        <viewControllerLayoutGuide type="bottom" id="oC9-Am-2Hd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bkh-Ij-kxp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jkr-Hr-XRl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154" y="177"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="download" width="120" height="121"/>
+        <image name="r1" width="258" height="196"/>
+    </resources>
+</document>
